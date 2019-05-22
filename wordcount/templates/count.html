@@ -1,0 +1,11 @@
+<h1>This page counts the number of words: </h1>
+<h4><a href = "{% url 'home' %}">Go to previous page</a></h4>
+<h2>The text that you have entered is:</h2>
+{{ fulltextarea }}
+<br><br>
+<b>The no. of word is :</b>{{ split }}
+<br><br>
+<b>The no.of words along with their frequency:</b> <br><br>
+{% for word,value in dict %}
+{{ word }} = {{ value }}<br>
+{% endfor %}
